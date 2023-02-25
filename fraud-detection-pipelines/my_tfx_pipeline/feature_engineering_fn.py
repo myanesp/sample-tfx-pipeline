@@ -17,7 +17,7 @@ import tensorflow_transform as tft
 import tensorflow as tf
 
 
-def preprocessing_fn(inputs: Dict[str, tf.Tensor]) -> Dict[str, tf.Tensor]:
+def preprocessing_fn(inputs: Dict[str, tf.Tensor]) -> Dict[str, tf.Tensor]: 
     # Let's normalize all the columns that start with V
     output_dict = {
         'Amount': tft.scale_to_0_1(inputs['Amount']),
